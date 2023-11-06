@@ -1,0 +1,437 @@
+/* Global Variabel */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+:root{
+    /* size margin */
+    --top_navbar: 3rem;
+
+    /* color */
+    --primary: #b2967d;
+    --highlight: #6F1D1B;
+    --font_primary: #1B1C22;
+    --navbar_menu: #432818;
+    --promo: #FAFAFA;
+
+    /* fonts */
+    --fonts_family: 'Open Sans', 'roboto';
+    --fonts_default: 1rem;
+    --fonts_hero: 2.25rem;
+    --fonts_title: 2.125rem;
+    --fonts_subtitle: 1.625rem;
+    --fonts_component: 1.125rem;
+    --fonts_footer: 1.25rem;
+    --fonts_copyright: 0.875rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--fonts_family);
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+nav{
+    margin-top: var(--top_navbar);
+}
+
+.navbar-nav{
+    margin-left: auto;
+}
+.navbar-nav > li{
+    margin-left: 3rem;
+}
+.nav-item{
+    font-size: var(--fonts_default);
+    font-weight: 600;
+}
+.nav-item a{
+    color: var(--navbar_menu) !important;
+}
+.navbar .nav-item .nav-link {
+    padding: 5px 0;
+    position: relative;
+}
+.navbar .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--navbar_menu);
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before{
+    color: var(--navbar_menu);
+    transform: scale(1);
+}
+
+.backgroundHero{
+    height: 43rem;
+    width: 33rem;
+    z-index: -3;
+    background-color: var(--primary);
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* hero */
+.textHero{
+    margin-top: 10rem;
+}
+.imageHero{
+    margin-top: 3rem;
+}
+.textHero h1{
+    font-size: var(--fonts_hero);
+    line-height: 3rem;
+    font-weight: 700;
+    color: var(--font_primary);
+}
+.textHero span{
+    color: var(--highlight);
+}
+.textHero p{
+    color: var(--font_primary);
+    font-size: var(--fonts_default);
+    line-height: 1.5rem;
+}
+.btnGetStarted{
+    border-radius: 5px;
+    color: var(--promo);
+    background-color: var(--navbar_menu);
+    border-color: var(--primary);
+}
+.btnGetStarted:hover{
+    background-color: var(--highlight);
+    color: var(--promo);
+    border-color: var(--highlight);
+}
+
+/* services */
+#services{
+    margin-top: 3rem;
+}
+.lamp{
+    margin-top: -29.7rem;
+    left: 23.5rem;
+    width: 14rem;
+    height: 29rem;
+    position: absolute;
+}
+.sofa1{
+    width: 15.3rem;
+    height: 15.3rem;
+}
+.sofa2{
+    margin-top: -0.2rem;
+    width: 15.3rem;
+    height: 15.3rem;
+}
+.textServices{
+    padding-left: 4rem;
+    margin-top: 5rem;
+}
+.textServices h1{
+    color: var(--font_primary);
+    font-size: var(--fonts_title);
+    line-height: 3rem;
+    font-weight: 700;
+}
+.textServices p{
+    font-size: var(--fonts_default);
+    color: var(--font_primary);
+    line-height: 1.5rem;
+}
+.textServices span{
+    color: var(--highlight);
+}
+.textServices ul{
+    margin-left: -1rem;
+    list-style: none;
+}
+.textServices ul li::before{
+    content: "\2022";
+    color: var(--highlight);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1rem;
+}
+
+/* blog */
+#blog{
+    margin-top: 3rem;
+}
+#blog h1{
+    text-align: center;
+    color: var(--font_primary);
+    font-size: var(--fonts_title);
+    line-height: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+#blog span{
+    color: var(--highlight);
+}
+.left img{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.right img{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.left .timestamp{
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--font_primary);
+}
+.right .timestamp{
+    margin-bottom: 0.5rem;
+    color: var(--font_primary);
+}
+.left  h2 {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: var(--font_primary);
+    font-size: var(--fonts_subtitle);
+    font-weight: 700;
+}
+.right  h2 {
+    margin-bottom: 1rem;
+    color: var(--font_primary);
+    font-size: var(--fonts_subtitle);
+    font-weight: 700;
+}
+.left  .description {
+    margin-left: 1rem;
+    color: var(--font_primary);
+    max-width: 30rem;
+}
+.right  .description {
+    color: var(--font_primary);
+    max-width: 35rem;
+}
+.left a {
+    margin-left: 1rem;
+}
+.left a, .right a{
+    border-radius: 5px;
+    color: var(--highlight);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.left a:hover{
+    background-color: var(--highlight);
+    color: var(--promo);
+    border-color: var(--highlight);
+}
+.right a:hover{
+    background-color: var(--highlight);
+    color: var(--promo);
+    border-color: var(--highlight);
+}
+
+/* download */
+#download{
+    margin-top: 12rem;
+    background: var(--primary);
+    height: 37.25rem;
+}
+.component img{
+    right: 0;
+    width: 34rem;
+    height: 37.25rem;
+    position: absolute;
+}
+.textDownload{
+    margin-top: 10rem;
+}
+.textDownload h1{
+    color: var(--font_primary);
+    font-size: var(--fonts_title);
+    line-height: 2.894rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.textDownload span{
+    color: var(--highlight);
+}
+.textDownload p{
+    font-size: var(--fonts_component);
+    color: var(--font_primary);
+}
+.textDownload a{
+    margin-left: -0.5rem;
+}
+.imageDownload{
+    z-index: 2;
+    margin-top: 6.5rem;
+    padding: 0;
+}
+.mockup{
+    display: inline-block;
+}
+.imageDownload h1{
+    display: inline-block;
+    color: var(--promo);
+    font-size: var(--fonts_title);
+    line-height: 3rem;
+    font-weight: 800;
+    margin-left: 7rem;
+}
+
+/* footer */
+#footer{
+    margin-top: 10rem;
+}
+.credit img{
+    margin-bottom: 1rem;
+}
+#footer h6{
+    color: var(--font_primary);
+    font-weight: 600;
+    font-size: var(--fonts_footer);
+    margin-bottom: 1rem;
+}
+#footer a{
+    text-decoration: none;
+    color: var(--font_primary);
+    margin-bottom: -2rem;
+}
+.contact a{
+    margin-right: 0.7rem;
+}
+.support {
+    margin-top: -0.2rem;
+}
+.about {
+    margin-top: -0.2rem;
+}
+.contact {
+    margin-top: -0.2rem;
+}
+.copyright{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media (max-width: 1280px){
+    .lamp{
+        left: 19.6rem;
+    }
+    .right  .description {
+        max-width: 32.5rem;
+    }
+    .imageDownload h1{
+        margin-left: 2rem;
+    }
+}
+
+/* mobile version */
+@media (max-width: 575.98px) {
+    /* navbar */
+    .navbar-nav{
+        text-align: center;
+        margin-left: -3rem;
+    }
+    .navbar-light .navbar-toggler-icon{
+        background-image: url(./assets/icons/menu.svg) !important;
+        outline: none;
+    }
+    .navbar-light button{
+        border: 0;
+    }
+    .nav-item{
+        margin-left: 0;
+    }
+
+    /* home */
+    .backgroundHero{
+        width: 40%;
+        height: 60%;
+    }
+    .imageHero{
+        margin-bottom: -6rem;
+    }
+    .textHero h1{
+        font-size: calc(var(--fonts_hero) - 0.5rem);
+        line-height: 2rem;
+    }
+    .textHero p{
+        margin-top: 1rem;
+        font-size: calc(var(--fonts_default) - 0.1rem);
+        line-height: 1.3rem;
+    }
+    .hero{
+        flex-direction: column-reverse;
+    }
+
+    /* services */
+    #services{
+        margin-top: 6rem;
+        padding-bottom: 100px;
+    }
+    .sofa1, .sofa2{
+        max-width: 40%;
+        margin-left: 3rem;
+    }
+    .sofa2{
+        margin-top: -7rem;
+    }
+    .lamp{
+        max-width: 32.8%;
+        padding-top: 6.8rem;
+        margin-left: -7.5rem;
+    }
+    .imageServices{
+        margin-top: -1rem;
+        float: right;
+    }
+    .textServices{
+        padding-left: 1rem;
+        margin-top: 0;
+    }
+    .textServices h1{
+        font-size: calc(var(--fonts_hero) - 0.5rem);
+        line-height: 2rem;
+    }
+    .textServices p{
+        margin-top: 1rem;
+        font-size: calc(var(--fonts_default) - 0.1rem);
+        line-height: 1.3rem;
+    }
+    .textServices li{
+        margin-top: 0.5rem;
+        font-size: calc(var(--fonts_default) - 0.1rem);
+        line-height: 1.3rem;
+    }
+    .textServices ul{
+        margin-top: -0.5rem;
+    }
+    /*testimoni*/
+    #testimoni{
+        margin-top: 2rem;
+    }
+
+    /* footer */
+    #footer{
+        height: 70vh;
+        margin-top: 6rem;
+        text-align: center;
+    }
+    .credit p, .support p, .about p{
+        font-size: calc(var(--fonts_default) - 0.2rem);
+        line-height: 1.3rem;
+    }
+    .support, .about{
+        display: inline-block;
+    }
+}
